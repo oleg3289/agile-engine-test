@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PictureViewerComponent } from './components/picture-view/picture-viewer.component';
+import { PictureViewerComponent } from './components/picture-viewer/picture-viewer.component';
 import { Image } from './models/image';
 import { ImageDetails } from './models/imageDetails';
 import { AppStorageService } from './services/appStorage.service';

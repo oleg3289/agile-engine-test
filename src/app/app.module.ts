@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { APP_ROUTING } from './app.routing';
-import { PictureViewerModule } from './components/picture-view/picture-viewer.module';
+import { PictureViewerModule } from './components/picture-viewer/picture-viewer.module';
 import { AboutGuard } from './guards/auth.guard';
 import { ImagesResolver } from './resolvers/images.resolver';
 import { AppStorageService } from './services/appStorage.service';
@@ -15,8 +15,6 @@ import { GetService } from './services/get.service';
 import { ImageDetailsResolver } from './resolvers/imageDetails.resolver';
 import { MatDialogModule } from '@angular/material/dialog';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
-import { AngularImageViewerModule } from "angular-x-image-viewer";
-
 @NgModule({
     imports:      [ 
         BrowserModule, 
@@ -26,8 +24,7 @@ import { AngularImageViewerModule } from "angular-x-image-viewer";
         RouterModule.forRoot(APP_ROUTING),
         HttpClientModule,
         MatDialogModule,
-        PictureViewerModule,
-        AngularImageViewerModule
+        PictureViewerModule
     ],
     declarations: [ AppComponent ],
     bootstrap:    [ AppComponent ],
