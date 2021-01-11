@@ -1,0 +1,53 @@
+app-picture-viewer {
+    .picture-card {
+        position: relative;
+        box-shadow: none !important;
+        &__img-wr {
+            // position: relative;
+        }
+        &__img {
+            height: auto;
+            width: auto;
+            &:hover {
+                cursor:zoom-in;
+            }
+            &.zoomed {
+                transform: scale(1.5);
+            }
+        }
+        &__info {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, .7);
+            color: #fff;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .info {
+            &__header {
+                font-weight: bold;   
+            }
+            &__item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+            }
+        }
+        
+        &__btn-left {
+            position: fixed;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        &__btn-right {
+            position: fixed;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

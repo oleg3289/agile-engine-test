@@ -29,3 +29,5 @@ $agile-engine-test-theme: mat-light-theme($agile-engine-test-primary, $agile-eng
 //////////////////////////////// reset, normalize
 @import './styles/common';
 @import './styles/normalize';
+/////////////////////////////// my styles
+@import './styles/global-styles';

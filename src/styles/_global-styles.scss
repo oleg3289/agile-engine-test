@@ -1,0 +1,11 @@
+mat-dialog-container {
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+// for image gallery
+.mat-sidenav-container, .mat-sidenav-content, .mat-tab-body-content {
+    transform: none !important;
+}
+
+ngx-gallery { display: inline-block; margin-bottom: 20px; }

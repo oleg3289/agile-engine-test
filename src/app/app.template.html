@@ -1,6 +1,12 @@
 
 <!-- <app-root> -->
 
-    <h1>THIS IS MY APPLICATION!!!</h1>
+    <section class="grid-wr">
+        <img class="grid-wr__grid-item" 
+            *ngFor="let pic of pictures"
+            [src]="pic.cropped_picture" 
+            [alt]="pic.id"
+            (click)="openPictureViewer(pic)">
+    </section>
 
 <!-- </app-root> -->

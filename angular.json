@@ -31,7 +31,8 @@
               "src/styles.scss",
               "./node_modules/primeng/resources/components/slider/slider.css",
               "node_modules/primeng/resources/components/breadcrumb/breadcrumb.css",
-              "node_modules/primeicons/primeicons.css"
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/font-awesome/css/font-awesome.css"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
@@ -51,7 +52,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
