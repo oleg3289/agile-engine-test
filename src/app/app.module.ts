@@ -15,6 +15,9 @@ import { GetService } from './services/get.service';
 import { ImageDetailsResolver } from './resolvers/imageDetails.resolver';
 import { MatDialogModule } from '@angular/material/dialog';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { LightBoxModule, WavesModule } from 'ng-uikit-pro-standard';
+import { MDBBootstrapModule, IconsModule } from 'angular-bootstrap-md';
+
 @NgModule({
     imports:      [ 
         BrowserModule, 
@@ -24,7 +27,11 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
         RouterModule.forRoot(APP_ROUTING),
         HttpClientModule,
         MatDialogModule,
-        PictureViewerModule
+        PictureViewerModule,
+        MDBBootstrapModule.forRoot(),
+        LightBoxModule,
+        WavesModule,
+        IconsModule
     ],
     declarations: [ AppComponent ],
     bootstrap:    [ AppComponent ],

@@ -6,43 +6,23 @@
             #image
             [src]="imageDetails.full_picture" 
             [alt]="imageDetails.id"
-            (click)="onClickImg()">
+            (click)="zoomToggle()"
+            [style.cursor]=" isZoomed ? 'zoom-out' : 'zoom-in' ">
 
-    </section>
-
-    <section class="picture-card__info info">
-        <div class="info__item">
-            <div class="info__header">
-                Author name:
-            </div>
-            <div class="info__text">{{ imageDetails.author }}</div>
-        </div>
-        <div class="info__item">
-            <div class="info__header">
-                Camera model: 
-            </div>
-            <div class="info__text">{{ imageDetails.camera }}</div>
-        </div>
-        <div class="info__item">
-            <div class="info__header">
-                Tags:
-            </div>
-            <div class="info__text">{{ imageDetails.tags }}</div>
-        </div>
     </section>
     
-    <button mat-raised-button 
+    <button mat-button 
         type="button" 
-        class="picture-card__btn-left"
+        class="picture-card__btn picture-card__btn-left"
         (click)="onClickBtn('left')">
         <span class="material-icons">
             keyboard_arrow_left
         </span>
     </button>
 
-    <button mat-raised-button 
+    <button mat-button 
         type="button" 
-        class="picture-card__btn-right"
+        class="picture-card__btn picture-card__btn-right"
         (click)="onClickBtn('right')">
         <span class="material-icons">
             keyboard_arrow_right
@@ -50,3 +30,30 @@
     </button>
 
 </div>
+
+<button mat-mini-fab class="exit-btn" (click)="dialogRef.close()">
+    <span class="material-icons">
+        close
+    </span>
+</button>
+
+<section class="info">
+    <div class="info__item">
+        <div class="info__header">
+            Author name:
+        </div>
+        <div class="info__text">{{ imageDetails.author }}</div>
+    </div>
+    <div class="info__item">
+        <div class="info__header">
+            Camera model: 
+        </div>
+        <div class="info__text">{{ imageDetails.camera }}</div>
+    </div>
+    <div class="info__item">
+        <div class="info__header">
+            Tags:
+        </div>
+        <div class="info__text">{{ imageDetails.tags }}</div>
+    </div>
+</section>

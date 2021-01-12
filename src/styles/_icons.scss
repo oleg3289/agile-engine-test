@@ -1,0 +1,46 @@
+
+@mixin custom-icon($url) {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url($url);
+        background-size: 20px auto;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+@mixin custom-arrow-btn($url) {
+    @include custom-icon($url);
+    // opacity: .75;
+    // transition: opacity .2s;
+}
+
+.close-popup {
+    @include custom-icon('../assets/close.svg');
+}
+
+.fullscreen-toogle {
+    @include custom-icon('../assets/full-screen.svg');
+}
+
+.zoom-toogle {
+    @include custom-icon('../assets/zoom-in.svg');
+}
+
+.nav-left {
+    @include custom-arrow-btn('../assets/left-arrow.svg');
+    &::before {
+        right: 0;
+    }
+}
+
+.nav-right {
+    @include custom-arrow-btn('../assets/right-arrow.svg');
+    &::before {
+        left: 0;
+    }
+}

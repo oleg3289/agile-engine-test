@@ -8,4 +8,12 @@ mat-dialog-container {
     transform: none !important;
 }
 
-ngx-gallery { display: inline-block; margin-bottom: 20px; }
+.cdk-overlay-pane {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.mat-dialog-container {
+    background: #fff;
+}

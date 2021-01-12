@@ -26,8 +26,12 @@ $agile-engine-test-theme: mat-light-theme($agile-engine-test-primary, $agile-eng
 // that you are using.
 @include angular-material-theme($agile-engine-test-theme);
 
+// font awesome
+@import '~ngx-sharebuttons/themes/default/default-theme';
+
 //////////////////////////////// reset, normalize
 @import './styles/common';
 @import './styles/normalize';
 /////////////////////////////// my styles
+@import './styles/icons';
 @import './styles/global-styles';

@@ -41,12 +41,13 @@ export class AppComponent implements OnInit, AfterViewInit {
     ngAfterViewInit(): void {}
 
     public openPictureViewer(item: ImageDetails) {
+        let index: number = this.pictures.findIndex((i: Image) => item.id === i.id);
 
         this.AS.getPicutreById(item.id).subscribe((res) => {
             const dialogRef = this.dialog.open(PictureViewerComponent, {
                 height: 'auto',
                 width: 'auto',
-                data: res
+                data: {item: res, index: index}
             });
     
             dialogRef.afterClosed().subscribe(() => {
