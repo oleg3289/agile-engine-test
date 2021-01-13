@@ -37,7 +37,6 @@ export class AuthInterceptor implements HttpInterceptor {
                                 //If reload successful update tokens
                                 if (data.status == 200) {
                                     //Update tokens
-                                    console.log(data)
                                     localStorage.setItem("api-token", data.result.token);
                                     localStorage.setItem("refreshToken", data.result.refreshToken);
                                     //Clone our fieled request ant try to resend it
