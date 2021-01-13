@@ -2,6 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
 
+## Download the project
+
+1. Run `git clone https://github.com/oleg3289/agile-engine-test.git` in any folder.
+2. Enter the folder with name of project and run `npm install`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4201/`. The app will automatically reload if you change any of the source files.
